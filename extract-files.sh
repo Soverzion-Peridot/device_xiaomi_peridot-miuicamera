@@ -58,8 +58,14 @@ function blob_fixup() {
         system/lib64/libgui-xiaomi.so)
             "${PATCHELF}" --set-soname libgui-xiaomi.so "${2}"
             ;;
-        system/lib64/libcamera_algoup_jni.xiaomi.so|system/lib64/libcamera_mianode_jni.xiaomi.so)
-            "${PATCHELF}" --replace-needed libgui.so libgui-xiaomi.so "${2}"
+        system/lib64/libcamera_algoup_jni.xiaomi.so)
+            [ "$2" = "" ] && return 0
+            grep -q "libgui-xiaomi.so" "${2}" || "${PATCHELF}" --add-needed libgui-xiaomi.so "${2}"
+            "${SIGSCAN}" -p "08 AD 40 F9" -P "08 A9 40 F9" -f "${2}"
+            ;;
+        system/lib64/libcamera_mianode_jni.xiaomi.so)
+            [ "$2" = "" ] && return 0
+            grep -q "libgui-xiaomi.so" "${2}" || "${PATCHELF}" --add-needed libgui-xiaomi.so "${2}"
             ;;
         system/priv-app/MiuiCamera/MiuiCamera.apk)
             tmp_dir="${EXTRACT_TMP_DIR}/MiuiCamera"
