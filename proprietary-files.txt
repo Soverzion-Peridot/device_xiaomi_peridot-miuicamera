@@ -1,8 +1,8 @@
-# All blobs below are extracted from peridot V816.0.7.0.UNPMIXM - miui_PERIDOTGlobal_OS1.0.7.0.UNPMIXM
+# All blobs below are extracted from peridot V816.0.12.0.UNPMIXM - miui_PERIDOTGlobal_OS1.0.12.0.UNPMIXM
 
-odm/lib64/libMiStereoFactoryCalibAnalyzeBin_qual.so|b8365cf2ffd6cbd916b974080e5d58f14873fbe8
-odm/lib64/libmiStereoCalibLib_qual.so|52926ee0dad04b175d83eb4eda5f3f5c5b04ad13
-product/priv-app/MiuiCamera/MiuiCamera.apk:system/priv-app/MiuiCamera/MiuiCamera.apk;OVERRIDES=Aperture,Camera,Camera2,GoogleCameraGo|b12aba46cc476baf923f535f072d01931502248b
+odm/lib64/libMiStereoFactoryCalibAnalyzeBin_qual.so:vendor/lib64/libMiStereoFactoryCalibAnalyzeBin_qual.so|b8365cf2ffd6cbd916b974080e5d58f14873fbe8
+odm/lib64/libmiStereoCalibLib_qual.so:vendor/lib64/libmiStereoCalibLib_qual.so|52926ee0dad04b175d83eb4eda5f3f5c5b04ad13
+product/priv-app/MiuiCamera/MiuiCamera.apk:system/priv-app/MiuiCamera/MiuiCamera.apk;OVERRIDES=Aperture,Camera,Camera2,GoogleCameraGo
 system/lib64/libgui.so:system/lib64/libgui-xiaomi.so
 system_ext/lib64/libcamera_algoup_jni.xiaomi.so:system/lib64/libcamera_algoup_jni.xiaomi.so|9b2b5dabfdf09c1a572257c6e780e4f1b00a3732
 system_ext/lib64/libcamera_mianode_jni.xiaomi.so:system/lib64/libcamera_mianode_jni.xiaomi.so
